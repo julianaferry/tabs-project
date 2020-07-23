@@ -1,30 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() { 
-    //get titles and texts
-    const titleTabs = document.getElementsByClassName('tabs-header__title');
-    const textTabs = document.getElementsByClassName('tabs-content__txt');
-        
-    //first remove any --active class on titles
-    const openedTab = (Id) => {
-        for (i = 0; i < titleTabs.length; i++) {
-            titleTabs[i].classList.remove('tabs-header__title--active');
-        }
-    
-        //first remove any --active class on text
-        for (i = 0; i < textTabs.length; i++) {
-            textTabs[i].classList.remove('tabs-content__txt--active');
-        }
+document.addEventListener("DOMContentLoaded", () => {  
+    let tabHeader = document.getElementsByClassName('tabs__header');
+    let tabContent = document.getElementsByClassName('tabs__content');
+  
+    const newTab = (Id) => {
+        //loop through the titles
+      for (i = 0; i < tabHeader.length; i++) {
+        tabHeader[i].classList.remove('tabs__header--active');
+      }
 
-        //add class on event.target
-        event.target.classList.add('tabs-header__title--active');
-
-        //find id and add class --active
-        document.getElementById('tabs__txt--' + Id).classList.add('tabs-content__txt--active');
-        }
-
-        //loop through titles again and add event click
-        for (i = 0; i < titleTabs.length; i++) {
-            titleTabs[i].addEventListener('click', () => {
-                openedTab(this.innerHTML.replace(/\s+/g, '-').toLowerCase());
+      //loop through the text
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].classList.remove('tabs__content--active');
+      }
+      //add class active on header
+      event.target.classList.add('tabs__header--active');
+      
+      //find id and add class active -  show text
+      document.getElementById('tabs__content--' + Id).classList.add('tabs__content--active');
+    }
+  
+        //loop through titles and click event
+        for (i = 0; i < tabHeader.length; i++) {
+        tabHeader[i].addEventListener('click', function() {
+            //replace text inside 
+            newTab(this.innerHTML.replace(/\s+/g, '-').toLowerCase());
         });
     }
-});
+  });

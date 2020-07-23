@@ -8,46 +8,50 @@
 		<link rel="stylesheet" href="style.css">
 		<script src="tabs.js"></script>
 	</head>
-	
 	<body>
-		<div class="tabs-container">
-				<!--tabs titles-->
-				<ul class="tabs-header">
-						<!--class active on first one-->
-					<li class="tabs-header__title tabs-header__title--active">Terminal 1</li>
-					<li class="tabs-header__title">Terminal 2</li>
-					<li class="tabs-header__title">Terminal 3</li>
+		<!--first with class active-->
+		<div class='tabs-container'>
+			<div class='tabs__headers'>
+				<!--first with class active-->
+				<ul>
+					<li class='tabs__header tabs__header--active'>Terminal 1</li>
+					<li class='tabs__header'>Terminal 2</li>
+					<li class='tabs__header'>Terminal 3</li>
+					
+					<!--can add more titles here-->
 				</ul>
-		
-			<!--tabs content -->
-			<div class="tabs-content">
-				<!--class active on first one-->
-				<div class="tabs-content__txt tabs-content__txt--active" id="tabs__txt--terminal1">
-				  	<h4 class="tabs-content__subtitle">Directions</h4> 
-				  		<p class="tabs-content__text"> Set your maps to Manchester Airport and exit the M56at Junction 5 and get in lane for Terminal 1(T1).
-					  		At the set of traffic lights, go straight ahead for T1.</p> 
-						<p class="tabs-content__text">At the roundabout, take the 5th exit and follow signs for T1 Meet & Greet(T1 M&G). 
-							After 0.1 mile take the first available left turn and continue 0.1 mile to a roundabout. Take the first exit and the entrance
-							to entrance to TI M&G is then immediatly on your right.</p>
-				</div>
-				<div class="tabs-content__txt" id="tabs__txt--terminal2">
-					<h4 class="tabs-content__subtitle">Directions</h4> 
-						<p class="tabs-content__text"> Set your maps to Manchester Airport and exit the M56at Junction 5 and get in lane for Terminal 1(T2).
-							At the set of traffic lights, go straight ahead for T2.</p> 
-					 	<p class="tabs-content__text">At the roundabout, take the 5th exit and follow signs for T2 Meet & Greet(T2 M&G). 
-						 	 After 0.1 mile take the first available left turn and continue 0.1 mile to a roundabout. Take the first exit and the entrance
-						  	to entrance to T2 M&G is then immediatly on your right.</p>
-				</div>
-				<div class="tabs-content__txt" id="tabs__txt--terminal3">
-					<h4 class="tabs-content__subtitle">Directions</h4> 
-						<p class="tabs-content__text"> Set your maps to Manchester Airport and exit the M56at Junction 5 and get in lane for Terminal 1(T3).
-							At the set of traffic lights, go straight ahead for T3.</p> 
-					  	<p class="tabs-content__text">At the roundabout, take the 5th exit and follow signs for T3 Meet & Greet(T3 M&G). 
-						  	After 0.1 mile take the first available left turn and continue 0.1 mile to a roundabout. Take the first exit and the entrance
-						  	to entrance to T3 M&G is then immediatly on your right.</p>
-				</div>
-				<!--able to add more tabs, just repeat the same div and follow id names-->
 			</div>
+			<div class="tabs">
+				<!--texts, first with active-->
+				<div class='tabs__content tabs__content--active' id='tabs__content--terminal-1'>
+					<h1>Directions</h1>
+					<p>Set your maps to Manchester Airport and exit the M56 at Junction 5 and get in lane for Terminal 1 (T1). 
+						At the set of traffic, go straight ahead for T1.</p>
+					<p>At the roundabout, take the 5th exit and follow signs for T1 Meet & Greet(T1 M&G). After 0.1 mile,
+						take the first available left turn and continue 0.1 mile to a roundabout. Take the first exit and the
+						entrance to T1 M&G is then immediately on your right.</p>
+				</div>
+				<div class='tabs__content' id='tabs__content--terminal-2'>
+					<h1>Directions T2</h1>
+					<p>Set your maps to Manchester Airport and exit the M56 at Junction 5 and get in lane for Terminal 2 (T2). 
+						At the set of traffic, go straight ahead for T2.</p>
+					<p>At the roundabout, take the 5th exit and follow signs for T2 Meet & Greet(T2 M&G). After 0.1 mile,
+						take the first available left turn and continue 0.1 mile to a roundabout. Take the first exit and the
+						entrance to T2 M&G is then immediately on your right.</p>
+				</div>
+				<div class='tabs__content' id='tabs__content--terminal-3'>
+					<h1>Directions T3</h1>
+					<p>Set your maps to Manchester Airport and exit the M56 at Junction 5 and get in lane for Terminal 3 (T3). 
+						At the set of traffic, go straight ahead for T3.</p>
+					<p>At the roundabout, take the 5th exit and follow signs for T3 Meet & Greet(T3 M&G). After 0.1 mile,
+						take the first available left turn and continue 0.1 mile to a roundabout. Take the first exit and the
+						entrance to T3 M&G is then immediately on your right.</p>
+				</div>
+				<!--more text can be added - just add id-->
+			</div>	
 		</div>
+		<footer>
+			<p style="bottom: 5%; position: absolute;">@made for Code Computer Love, by Juliana Ferreira :)</p>
+		</footer>
 	</body>
 </html>
