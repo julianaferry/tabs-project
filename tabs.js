@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {  
-    let tabHeader = document.getElementsByClassName('tabs__header');
-    let tabContent = document.getElementsByClassName('tabs__content');
+    const tabHeader = document.getElementsByClassName('tabs__header');
+    const tabContent = document.getElementsByClassName('tabs__content');
   
     const newTab = (Id) => {
         //loop through the titles

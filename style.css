@@ -12,7 +12,6 @@ body {
     overflow: overlay;
 }
 
-
 .tabs__headers > ul{
     text-transform: none;
     list-style: none;
@@ -20,10 +19,8 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-left: -40px;
-  
+    margin-left: -40px;  
 }
-
 
 .tabs__header {
     text-decoration: none;
@@ -37,8 +34,7 @@ body {
     background-color: #E3E8EC
 }
 
-
-.tabs__header:not(:first-of-type){
+.tabs__header:not(:first-of-type) {
     margin-left: 3px;
 }
 
