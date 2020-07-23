@@ -58,4 +58,10 @@ body {
 
 .tabs__content--active {
     display: block;
-}   
+}  
+
+.made {
+    bottom: 0%;
+    position: absolute;
+    font-size: 11px;
+}
