@@ -1,0 +1,14 @@
+body {
+    background-color: #F3F4F5;
+    box-sizing: border-box;
+}
+
+.tabs-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.tabs-header {
+
+}
