@@ -4,11 +4,58 @@ body {
 }
 
 .tabs-container {
-    max-width: 800px;
+    max-width: 70vw;
     margin: 0 auto;
 }
 
 
 .tabs-header {
+    text-transform: none;
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -40px;
+}
 
+
+.tabs-header__title {
+    text-decoration: none;
+    color: #10396B;
+    transition: all .3s ease-in-out;
+    background-color: #E3E9EC;
+    padding: 5px;
+    font-size: 14px;
+    display: block;
+}
+
+.tabs-header__title:active,
+.tabs-header__title:hover {
+    border-top: 2px solid #01A9AB;
+    background-color: #fff;
+}
+
+li {
+   
+  
+ 
+}
+
+.tabs-content {
+   margin-top: -15px;
+
+  
+  
+}
+
+.tabs-content__txt {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+ .active {
+    display: block;
 }
