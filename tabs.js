@@ -1,29 +1,30 @@
+document.addEventListener("DOMContentLoaded", function() { 
+    //get titles and texts
+    const titleTabs = document.getElementsByClassName('tabs-header__title');
+    const textTabs = document.getElementsByClassName('tabs-content__txt');
+        
+    //first remove any --active class on titles
+    const openedTab = (Id) => {
+        for (i = 0; i < titleTabs.length; i++) {
+            titleTabs[i].classList.remove('tabs-header__title--active');
+        }
+    
+        //first remove any --active class on text
+        for (i = 0; i < textTabs.length; i++) {
+            textTabs[i].classList.remove('tabs-content__txt--active');
+        }
 
-const tabActive = () => {
-    // get the title and the texts
-    let titleElm = document.querySelectorAll('.tabs-header__title');   
-    let NewActiveTab = document.querySelectorAll('.tabs-content__txt');
- 
-//for loop throught the titles
- for (const i = 0; i < titleElm; i++) {
-     //click event add
-    titleElm[i].addEventListener('click', function() {
-       for (const i = 0; i < titleElm; i++) {
-            NewActiveTab[i].className = 'tabs-content__txt';
-       }
- 
+        //add class on event.target
+        event.target.classList.add('tabs-header__title--active');
 
-    document.getElementById(this.dataset.id).className = 'tabs-content__txt active';
+        //find id and add class --active
+        document.getElementById('tabs__txt--' + Id).classList.add('tabs-content__txt--active');
+        }
 
-
-    for (const i = 0; i < titleElm; i++) {
-        titleElm[i].className = 'tabs-header__title active';
-   }
-    this.className = 'tabs-header__title active';
-})
-}
-  
-}
-  
-tabActive();
-
+        //loop through titles again and add event click
+        for (i = 0; i < titleTabs.length; i++) {
+            titleTabs[i].addEventListener('click', () => {
+                openedTab(this.innerHTML.replace(/\s+/g, '-').toLowerCase());
+        });
+    }
+});
