@@ -20,12 +20,12 @@ body {
 }
 
 
-.tabs-header__title {
+.tabs-header__title > a{
     text-decoration: none;
     color: #10396B;
-    transition: all .3s ease-in-out;
+   
     background-color: #E3E9EC;
-    padding: 5px;
+    padding: 15px;
     font-size: 14px;
     display: block;
 }
@@ -33,20 +33,15 @@ body {
 .tabs-header__title:active,
 .tabs-header__title:hover {
     border-top: 2px solid #01A9AB;
+  
+}
+.tabs-header__title:active >a,
+.tabs-header__title:hover >a {
     background-color: #fff;
 }
 
-li {
-   
-  
- 
-}
-
 .tabs-content {
-   margin-top: -15px;
-
-  
-  
+   margin-top: -16px; 
 }
 
 .tabs-content__txt {
@@ -54,6 +49,7 @@ li {
     background-color: #fff;
     padding: 20px;
     text-align: left;
+    color: #10396B;
 }
 
  .active {
